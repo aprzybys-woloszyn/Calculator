@@ -1,0 +1,134 @@
+html {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffeeee, #ddefbb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    text-align: center;
+    font-family: 'Lucida Console', arial, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 150%;
+    text-transform: uppercase;
+}
+
+/* Calculator display */
+
+.calculator {
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 35px -5px rgba(0, 0, 0, 0.7);
+}
+
+.calculator-screen {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-end;
+    background: #304D63;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 40px;
+    font-size: 2.5em;
+    font-family: 'Lucida Console', arial, sans-serif;
+    font-weight: 400;
+    overflow-x: auto;
+}
+
+/* Calculator buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 15px;
+}
+
+.equals {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+}
+
+button {
+    min-height: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
+    font-weight: 300;
+    background: lightgrey;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:focus {
+    outline: none;
+}
+
+.operator {
+    background-color: darkgrey;
+    font-size: 1.7em;
+}
+
+.equals {
+    background-color: rgb(179, 230, 181);
+}
+
+
+.clear {
+    background-color: rgba(250, 128, 114, 0.8);
+}
+
+.clear:hover {
+    filter: brightness(85%);
+}
+
+/* Display resolution */
+
+@media screen and (max-width: 600px) {
+
+    .calculator {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 420px) and (max-height: 740px) {
+    .calculator {
+        width: 90%;
+    }
+
+    .title {
+        top: 2%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+
+
+    .title {
+        top: 4%;
+    }
+}
